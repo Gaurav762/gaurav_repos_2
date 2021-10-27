@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Press Ok to conform")) {
+    alert("Form submitted successfuly!!");
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  max-width: 800px;
+  margin: auto;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+
+input[type=Date], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.registerbtn {
+  background-color: #FFC300 ;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+<form>
+  <div class="container">
+    <h1 align="center">User Registration Form</h1><br>
+    
+    <hr><br>
+<label for="Username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" maxlength="20" name="Username" id="Username" required>
+    
+    <label for="email"><b>Email</b></label><br>
+    <input type="email" placeholder="Enter Email" name="email" id="email" required><br><br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+<label for="Username"><b>Enter Birthdate</b></label>
+    <input type="Date" placeholder="Birthdate"  name="Birthdate" id="Birthdate" required>
+    <hr>
+
+<label for="City"><b>Choose a City:</b></label>
+  <select name="City" id="City">
+    <option value="Mumbai">Mumbai</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Kolkata">Kolkata</option>
+    <option value="Banglore">Banglore</option>
+  </select><br><br><br><br>
+
+<label for="Languages Known"><b>Languages Known</b></label><br>
+ <input type="checkbox" id="Language1" name="Language1" value="C">
+  <label for="Language"> C</label><br>
+  <input type="checkbox" id="Language2" name="Language2" value="C++">
+  <label for="Language">C++</label><br>
+  <input type="checkbox" id="Language3" name="Language3" value="Java">
+  <label for="Language">Java</label><br>
+<input type="checkbox" id="Language4" name="Language4" value="JavaScript">
+  <label for="Language">JavaScript</label><br>
+<input type="checkbox" id="Language4" name="Language5" value="Python">
+  <label for="Language">Python</label>
+<br><br>
+    
+
+    <button type="submit" onclick="myFunction()" class="registerbtn">Register</button>
+  </div>
+  
+  
+</form>
+
+</body>
+</html>
